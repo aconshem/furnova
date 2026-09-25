@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us — FURNOVA</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <section class="container about-hero">
+    <div>
+      <p class="eyebrow" id="about-eyebrow"></p>
+      <h1 class="serif" style="font-size:40px;margin-top:10px;">Thoughtful furniture for modern Kenyan spaces.</h1>
+      <p>Furnova is a temporary brand concept created for this frontend demonstration. The copy is intentionally editable so the final business story can be added later.</p>
+    </div>
+    <img id="about-img" src="" alt="Furniture showroom">
+  </section>
+
+  <section class="section section-panel-alt">
+    <div class="container two-col">
+      <div>
+        <h2 class="serif">Our Story</h2>
+        <p>Replace this placeholder with the company's actual history, values and milestones.</p>
+      </div>
+      <div>
+        <h2 class="serif">Our Approach</h2>
+        <p>Replace this placeholder with your sourcing, craftsmanship, service and customer experience story.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-col">
+      <div>
+        <h2 class="serif">Quality &amp; Craftsmanship</h2>
+        <p>Use this area to explain materials, construction standards, finishes and quality checks.</p>
+      </div>
+      <div>
+        <h2 class="serif">Our Customers</h2>
+        <p>Use this section to describe the homeowners, professionals and businesses you serve.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<div id="whatsapp-button"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/layout.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('about-eyebrow').textContent = `About ${SITE.brandName}`;
+  document.getElementById('about-img').src = IMAGES.living;
+});
+</script>
+</body>
+</html>

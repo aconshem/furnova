@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wishlist — FURNOVA</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="container" style="padding:48px 0;">
+  <h1 class="serif" style="font-size:42px;">Wishlist</h1>
+  <p style="margin-top:10px;color:#777;">Your saved furniture, stored in this browser.</p>
+  <div id="wishlist-results" style="margin-top:20px;"></div>
+</main>
+
+<div id="site-footer"></div>
+<div id="whatsapp-button"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/product-card.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.getElementById('wishlist-results');
+
+  function render() {
+    const ids = Store.getWishlist();
+    const items = PRODUCTS.filter(p => ids.includes(p.id));
+    if (items.length === 0) {
+      el.innerHTML = `
+        <div class="empty-state">
+          <h2>Your wishlist is empty</h2>
+          <p>Tap the heart on any product to save it here.</p>
+          <a href="shop.html" class="btn btn-dark">Browse Furniture</a>
+        </div>
+      `;
+    } else {
+      el.innerHTML = `<div class="product-grid">${items.map(productCardHTML).join('')}</div>`;
+    }
+  }
+
+  el.addEventListener('click', e => {
+    if (e.target.closest('[data-action="wishlist"]')) {
+      // re-render after the toggle updates localStorage
+      setTimeout(render, 0);
+    }
+  });
+
+  initProductCardEvents(el);
+  render();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop Furniture — FURNOVA</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main class="container">
+  <div class="page-head" style="padding-bottom:30px;border-bottom:1px solid var(--line);">
+    <p class="eyebrow">Collection</p>
+    <h1 class="serif">Shop Furniture</h1>
+    <p>Browse pieces for every room, with simple WhatsApp ordering at checkout.</p>
+  </div>
+
+  <button class="filter-toggle" id="filter-toggle" style="margin-top:20px;">
+    <span id="filter-toggle-icon"></span> Filters
+  </button>
+
+  <div class="shop-layout">
+    <aside class="filters" id="filters">
+      <div class="filter-block">
+        <h3>Category</h3>
+        <div class="filter-cat-list" id="category-filter-list"></div>
+      </div>
+      <div class="filter-block range-row">
+        <h3>Maximum price</h3>
+        <input type="range" id="price-range" min="10000" max="200000" step="5000" value="200000">
+        <p id="price-range-label">Up to KSh 200,000</p>
+      </div>
+    </aside>
+
+    <div>
+      <div class="shop-controls">
+        <input type="text" class="shop-search" id="shop-search" placeholder="Search furniture...">
+        <select class="shop-sort" id="shop-sort">
+          <option>Featured</option>
+          <option>Newest</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Name A-Z</option>
+        </select>
+      </div>
+      <div id="shop-results"></div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<div id="whatsapp-button"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/product-card.js"></script>
+<script src="assets/js/shop.js"></script>
+</body>
+</html>

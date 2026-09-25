@@ -1,12 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <meta name="theme-color" content="#2f2924"/>
-    <title>Furnova — Furniture for modern living</title></head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FURNOVA — Furniture That Makes Your Space Feel Like Home</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
 <body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
+
+<div id="site-header"></div>
+
+<main>
+
+  <section class="hero">
+    <img id="hero-img" src="" alt="Elegant contemporary living room">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Furnova Furniture</p>
+          <h1 class="serif">Furniture That Makes Your Space Feel Like Home</h1>
+          <p>Discover stylish, comfortable furniture designed for modern living.</p>
+          <div class="hero-ctas">
+            <a href="shop.html" class="btn btn-light">Shop Furniture</a>
+            <a href="#collections" class="btn btn-outline">Explore Collections</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="collections">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Explore</p>
+          <h2 class="serif section-title">Shop By Category</h2>
+        </div>
+        <a href="shop.html" class="view-all">View all →</a>
+      </div>
+      <div class="cat-grid" id="category-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-panel">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Curated for you</p>
+          <h2 class="serif section-title">Featured Furniture</h2>
+        </div>
+        <a href="shop.html" class="view-all">Shop all →</a>
+      </div>
+      <div class="product-grid" id="featured-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="room-grid" id="room-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow-light">Fresh arrivals</p>
+      <h2 class="serif section-title">New Arrivals</h2>
+      <div class="product-grid" id="new-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="serif section-title" style="text-align:center;">Why Choose Us</h2>
+      <div class="feature-grid" id="feature-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="cta-banner">
+        <p class="eyebrow">Make it yours</p>
+        <h2 class="serif section-title">Transform Your Space</h2>
+        <p>Furniture that brings comfort and character into your home.</p>
+        <a href="shop.html" class="btn btn-dark">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-panel-alt">
+    <div class="container">
+      <h2 class="serif section-title" style="text-align:center;">What Customers Say</h2>
+      <p style="margin:12px auto 0;max-width:520px;text-align:center;font-size:13.5px;color:#777;">
+        Placeholder testimonials for the frontend demonstration — replace with genuine customer feedback before launch.
+      </p>
+      <div class="review-grid" id="review-grid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="serif section-title">Designed For Real Spaces</h2>
+      <div class="inspo-grid" id="inspo-grid"></div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div class="container">
+      <h2 class="serif" style="font-size:26px;">Stay Inspired</h2>
+      <p>Get new arrivals, furniture inspiration and special offers.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" required placeholder="Your email address">
+        <button class="btn btn-dark" type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-note" id="newsletter-note" hidden>Thanks for subscribing!</p>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+<div id="whatsapp-button"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/store.js"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/product-card.js"></script>
+<script src="assets/js/home.js"></script>
 </body>
 </html>
